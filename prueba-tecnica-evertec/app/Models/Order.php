@@ -16,6 +16,9 @@ class Order extends Model
      */
     protected $fillable = [
     'customer_name',
+    'customer_document_type',
+    'customer_document',
+    'customer_last_name',
     'customer_email',
     'customer_mobile',
     'price',

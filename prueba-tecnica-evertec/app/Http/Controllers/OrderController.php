@@ -30,6 +30,8 @@ class OrderController extends Controller
     {
         $request->validate([
             'customer_name' => 'required',
+            'customer_document_type' => 'required',
+            'customer_document' => 'required',
             'customer_email' => 'required|email',
             'customer_mobile' => 'required',
         ]);
@@ -67,10 +69,13 @@ class OrderController extends Controller
         ]);
     
         $params = [
-            "locale" => "en_CO",
+            "locale" => "es_CO",
             "buyer" => [
                 "name" => $Order[0]->customer_name,
+                "surname" => $Order[0]->customer_last_name,
                 "email" => $Order[0]->customer_email,
+                "documentType" => $Order[0]->customer_document_type,
+                "document" => $Order[0]->customer_document,
                 "mobile" => $Order[0]->customer_mobile
             ],
             "payment" => [

@@ -8,10 +8,30 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
+                    <strong>Document:</strong>
+                    <select name="customer_document_type" class="form-control">
+                        <option value="CC">Cédula de ciudadanía</option>
+                        <option value="CE">Cédula de extranjería</option>
+                        <option value="TI">Tarjeta de identidad</option>
+                        <option value="NIT">Número de Identificación Tributaria</option>
+                        <option value="RUT">Registro único tributario</option>
+                    </select>
+                    <br>
+                    <input type="number" name="customer_document" class="form-control" placeholder="Document">
+                </div>
+            </div>        
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
                     <strong>Name:</strong>
                     <input type="text" name="customer_name" class="form-control" placeholder="Name">
                 </div>
             </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Last Name:</strong>
+                    <input type="text" name="customer_last_name" class="form-control" placeholder="Last Name">
+                </div>
+            </div>            
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Email:</strong>
